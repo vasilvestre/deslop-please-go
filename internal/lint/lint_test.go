@@ -72,3 +72,22 @@ func TestShallowModuleThatShowsMoreThanItHides(t *testing.T) {
 		t.Fatalf("%+v", lists)
 	}
 }
+
+func TestLongFileOverTheLimitOnly(t *testing.T) {
+	d := expect(t, "longfile", "long-file long.go")
+	if d[0].Message != "`long.go` has 801 lines, more than 800" {
+		t.Fatal(d[0].Message)
+	}
+}
+
+func TestPackageBucketByName(t *testing.T) {
+	expect(t, "bucket", "package-bucket util")
+}
+
+func TestExportedMutexOnExportedStructs(t *testing.T) {
+	expect(t, "mutex", "exported-mutex m.Bad.Mu", "exported-mutex m.Bad.RWMutex", "exported-mutex m.Bad.Ready", "exported-mutex m.Bad.WG")
+}
+
+func TestLonelyInterfaceWithOneImplementerInItsPackage(t *testing.T) {
+	expect(t, "lonely", "lonely-interface a.Keeper", "lonely-interface a.Store")
+}

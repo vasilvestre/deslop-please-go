@@ -15,10 +15,17 @@ const (
 	Tangle        Lint = "tangle"
 	FieldLeak     Lint = "field-leak"
 	ShallowModule Lint = "shallow-module"
+	LongFile      Lint = "long-file"
+	PackageBucket Lint = "package-bucket"
+	ExportedMutex Lint = "exported-mutex"
+	LonelyIface   Lint = "lonely-interface"
 )
 
+// All is every lint, in the order reports come out.
+var All = []Lint{ModuleCycle, Tangle, FieldLeak, ShallowModule, LongFile, PackageBucket, ExportedMutex, LonelyIface}
+
 func ParseLint(name string) (Lint, bool) {
-	for _, lint := range []Lint{ModuleCycle, Tangle, FieldLeak, ShallowModule} {
+	for _, lint := range All {
 		if string(lint) == name {
 			return lint, true
 		}

@@ -13,7 +13,7 @@ import (
 func Run(m *model.Model) []report.Diagnostic {
 	x := buildIndex(m)
 	var diagnostics []report.Diagnostic
-	for _, lint := range []func(*index) []report.Diagnostic{moduleCycles, tangles, fieldLeaks, shallowModules} {
+	for _, lint := range []func(*index) []report.Diagnostic{moduleCycles, tangles, fieldLeaks, shallowModules, longFiles, packageBuckets, exportedMutexes, lonelyInterfaces} {
 		diagnostics = append(diagnostics, lint(x)...)
 	}
 	sort.SliceStable(diagnostics, func(i, j int) bool {
@@ -27,7 +27,7 @@ func Run(m *model.Model) []report.Diagnostic {
 }
 
 func order(lint report.Lint) int {
-	for i, l := range []report.Lint{report.ModuleCycle, report.Tangle, report.FieldLeak, report.ShallowModule} {
+	for i, l := range report.All {
 		if l == lint {
 			return i
 		}

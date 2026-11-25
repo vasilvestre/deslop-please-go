@@ -58,6 +58,19 @@ entries are fixed so you can tighten the file.
   than seven things, or more than seven functions of one type. Forwarders
   (one-statement bodies) and library-protocol methods (`String`, `Error`, ...)
   count for nothing.
+- **long-file**: a non-test, non-generated `.go` file of more than 800 lines.
+- **package-bucket**: a package whose name (last element of its path) is
+  `util`, `utils`, `common`, `helpers`, `helper`, `misc`, `shared`, `base` or
+  `types`. Name-based only.
+- **exported-mutex**: an exported field of an exported struct whose type is
+  `sync.Mutex`, `sync.RWMutex`, `sync.Once`, `sync.WaitGroup` (value or pointer)
+  or a channel, or an exported embedded `sync.Mutex` / `sync.RWMutex`.
+- **lonely-interface**: an exported interface with at least one method that
+  has exactly one implementing named type (value or pointer receiver) among the
+  analysed packages, declared in the interface's own package, with no use of
+  the interface or its methods from another package. Interfaces embedding an
+  interface from outside the analysed packages (`error`, `io.Reader`) and
+  constraints are skipped. With no implementer, or two, nothing is reported.
 
 ## Agent skill
 
@@ -70,6 +83,9 @@ the folder into your agent's skills directory.
 
 - It is syntactic and type based: no call graph through interfaces, no
   see-through getters for `field-leak`.
+- Test files are not loaded, so a `lonely-interface` whose second implementer
+  is a fake in a `_test.go` file is reported: that interface is a test seam,
+  allowlist it.
 - Constructors (`NewX`) are things of their own, not part of `X`.
 - Needs a Go toolchain at least as new as the module under analysis.
 

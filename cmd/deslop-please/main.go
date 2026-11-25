@@ -17,8 +17,8 @@ import (
 
 const usage = `usage: deslop-please [--allow <file>] [--update-allow <file>] [patterns...]
 
-Runs architectural lints (module-cycle, tangle, field-leak, shallow-module)
-on the Go packages that match patterns, ./... by default.
+Runs architectural lints (module-cycle, tangle, field-leak, shallow-module, long-file,
+package-bucket, exported-mutex, lonely-interface) on the Go packages that match patterns, ./... by default.
 
 options:
   --allow <file>         mute the listed existing debt; new errors still fail
