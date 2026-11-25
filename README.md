@@ -59,15 +59,12 @@ entries are fixed so you can tighten the file.
   (one-statement bodies) and library-protocol methods (`String`, `Error`, ...)
   count for nothing.
 
-## Add to your `AGENTS.md`
+## Agent skill
 
-```markdown
-- Run `deslop-please` to check for sloppy Go code structure.
-- Errors flagged by `deslop-please` must be fixed from first principles, don't do mechanical moves to hide them.
-    - `module-cycle` & `tangle`: what is the intended layer of abstraction? Which package should sit at which layer?
-    - `field-leak` & `shallow-module`: why do these fields/functions exist at all? What are the patterns of use? Can they be hidden behind a narrow interface (a method, an unexported field)? Don't fix each leak one at a time, fix them holistically.
-    - Draw a diagram to help the user understand the before and proposed after structure.
-```
+`skills/deslop-please/SKILL.md` is a skill that tells a coding agent when to run
+the tool and how to fix findings from first principles. Install it with your
+skill manager, for example `npx skills add vasilvestre/deslop-please-go`, or copy
+the folder into your agent's skills directory.
 
 ## Limits
 
