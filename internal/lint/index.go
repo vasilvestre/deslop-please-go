@@ -6,8 +6,8 @@ import (
 	"go/types"
 	"path/filepath"
 
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 // thing is what a reader learns as one: a type with its fields and methods,

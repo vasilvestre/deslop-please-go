@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 // tangles: things of one package that know each other in a circle, written

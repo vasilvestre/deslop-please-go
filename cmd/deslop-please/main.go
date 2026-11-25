@@ -8,11 +8,11 @@ import (
 	"io"
 	"os"
 
-	"github.com/vsilvestre/deslop-please-go/internal/allow"
-	"github.com/vsilvestre/deslop-please-go/internal/lint"
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/render"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/allow"
+	"github.com/vasilvestre/deslop-please-go/internal/lint"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/render"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 const usage = `usage: deslop-please [--allow <file>] [--update-allow <file>] [patterns...]

@@ -6,7 +6,7 @@ of [deslop-please](https://github.com/deterministic-machines/deslop-please)
 **narrow** interfaces. Here a module is a Go package.
 
 ```bash
-go install github.com/vsilvestre/deslop-please-go/cmd/deslop-please@latest   # or: go build ./cmd/deslop-please
+go install github.com/vasilvestre/deslop-please-go/cmd/deslop-please@latest   # or: go build ./cmd/deslop-please
 ```
 
 ```bash

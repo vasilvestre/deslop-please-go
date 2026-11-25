@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vsilvestre/deslop-please-go/internal/lint"
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/lint"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 func run(t *testing.T, fixture string) []report.Diagnostic {

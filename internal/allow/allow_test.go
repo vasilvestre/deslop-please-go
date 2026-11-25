@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vsilvestre/deslop-please-go/internal/allow"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/allow"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 func diag(lint report.Lint, key string) report.Diagnostic {

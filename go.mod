@@ -1,4 +1,4 @@
-module github.com/vsilvestre/deslop-please-go
+module github.com/vasilvestre/deslop-please-go
 
 go 1.24.0
 

@@ -7,8 +7,8 @@ import (
 	"go/types"
 	"sort"
 
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 // fieldUse is code of another package working on a field.

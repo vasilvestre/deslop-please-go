@@ -6,8 +6,8 @@ import (
 	"go/types"
 	"sort"
 
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 // breakEven is what a package hides for each function it shows. Its interface

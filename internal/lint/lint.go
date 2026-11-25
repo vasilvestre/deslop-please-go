@@ -5,8 +5,8 @@ package lint
 import (
 	"sort"
 
-	"github.com/vsilvestre/deslop-please-go/internal/model"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/model"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 // Run is every lint over m, ordered by lint, then key.

@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vsilvestre/deslop-please-go/internal/render"
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/render"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 func TestPicturesAndSummary(t *testing.T) {

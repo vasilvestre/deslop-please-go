@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/vsilvestre/deslop-please-go/internal/report"
+	"github.com/vasilvestre/deslop-please-go/internal/report"
 )
 
 const header = "# Existing architectural debt, muted by `deslop-please --allow`.\n" +
